@@ -1,0 +1,33 @@
+{
+  "name": "hvst.toggle",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Harvest",
+      "homepage": "http://www.hvst.com"
+    },
+    "Sterling Salzberg <sterling@hvst.com>",
+    "Enrique Alcantara <enrique@hvst.com>"
+  ],
+  "description": "jQuery plugin that allows to use neat CSS3 animated tabs",
+  "main": "dist/hvst.toggle.js",
+  "moduleType": [
+    "globals"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hvst/hvst.toggle.git"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/hvst/hvst.toggle",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.10.2"
+  }
+}
