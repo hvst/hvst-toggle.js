@@ -30,6 +30,13 @@ module.exports = function(grunt) {
         dest: 'dist/<%= pkg.name %>.min.js'
       }
     },
+    sass: {
+      all: {
+        files: {
+          'dist/css/<%= pkg.name %>.css' : 'sass/hvst.toggle.css.scss'
+        }
+      }
+    },
     jshint: {
       options: {
         curly: true,
@@ -79,8 +86,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-karma');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-sass');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
+  grunt.registerTask('default', [
+    'sass',
+    'jshint',
+    'concat',
+    'uglify'
+  ]);
 
 };
