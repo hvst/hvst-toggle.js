@@ -45,7 +45,13 @@ module.exports = function(grunt) {
         eqnull: true,
         browser: true,
         globals: {
-          jQuery : true
+          jQuery : true,
+          describe : false,
+          it : false,
+          beforeEach : false,
+          jasmine : false,
+          loadFixtures : false,
+          expect : false
         }
       },
       gruntfile: {
