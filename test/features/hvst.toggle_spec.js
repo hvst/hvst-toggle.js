@@ -18,4 +18,14 @@ describe('Hvst.Toggle', function() {
 
         expect(instance).toEqual($toggle.data('hvstToggle'));
     });
+
+    it('creates hvst toggle custom markup', function() {
+        $toggle.hvstToggle();
+
+        expect($('body'))
+        .toContainElement('.hvst-google, .hvst-toggle-bg, .hvst-seeker');
+        expect($('body'))
+        .toContainElement('.hvst-toggle-bg a');
+
+    });
 });
