@@ -31,6 +31,7 @@
     "jquery": "1.10.2"
   },
   "devDependencies": {
-    "jasmine-jquery": "~2.0.3"
+    "jasmine-jquery": "~2.0.3",
+    "compass-mixins": "~1.0.0"
   }
 }

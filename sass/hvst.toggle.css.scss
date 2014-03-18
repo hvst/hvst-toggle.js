@@ -1,0 +1,62 @@
+@charset "UTF-8";
+@import "bower_components/compass-mixins/lib/_compass.scss";
+
+$white: #fff;
+$darkPurple: #1a113e;
+$blue: #2398ff;
+
+.hvst-toggle {
+    text-align: center;
+    font-size: 11px;
+}
+.hvst-toggle-bg {
+    position: relative;
+    display: inline-block;
+    margin: 10px 0 10px;
+    padding: 2px 11px 0;
+    line-height: 100%;
+    color: $darkPurple;
+    background: transparentize($darkPurple, 0.7);
+    @include border-radius(4px);
+
+    a {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        overflow: auto;
+        width: auto;
+        padding: 4px 20px;
+        color: $white;
+        color: transparentize($white, 0.3);
+        text-transform: uppercase;
+        @include transition;
+
+        h4 { @extend .thin; }
+        &.big, h4 { line-height: inherit; }
+
+        &.hvst-toggle-active {
+            color: $white;
+            font-weight: 900;
+
+            h4 { font-weight: 900; }
+        }
+        &:hover {
+            color: $white;
+            text-decoration: none;
+            @include transition;
+        }
+    }
+}
+
+.hvst-seeker {
+    position: absolute;
+    display: block;
+    background: $blue;
+    padding: 0 10px;
+    @include border-radius(4px);
+    @include transition;
+
+    &:hover {
+        background: transparentize($blue, 0.5);
+    }
+}
