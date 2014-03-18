@@ -26,6 +26,33 @@ describe('Hvst.Toggle', function() {
         .toContainElement('.hvst-google, .hvst-toggle-bg, .hvst-seeker');
         expect($('body'))
         .toContainElement('.hvst-toggle-bg a');
-
     });
+
+    it('set the item as active when clicked', function() {
+        var $link = $toggle.find('a').eq(1),
+            $hvstSeeker,
+            transformValue,
+            hvstToggle;
+
+        $toggle.hvstToggle();
+
+        $hvstSeeker = $('.hvst-seeker');
+        transformValue = getTransformValue($hvstSeeker);
+
+        $link.triggerHandler('click');
+
+        hvstToggle = $toggle.data('hvstToggle');
+
+
+        expect($link).toHaveClass(hvstToggle.settings.activeClass);
+
+        //the seeker was translated
+        expect(transformValue).not.toEqual(getTransformValue($hvstSeeker));
+    });
+
+    function getTransformValue($element) {
+        return $element.css('-webkit-transform') ||
+        $element.css('-moz-transform') || $element.css('transform') ||
+        $element.css('left');
+    }
 });
