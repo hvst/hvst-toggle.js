@@ -10,18 +10,18 @@ jQuery plugin that allows to use neat CSS3 animated tabs
 ## Installation
 
     $ bower install hvst.toggle
-    
+
 ## Requirements
 
 jQuery
 
-## Browser Support 
+## Browser Support
 
 * Chrome
-* Firefox 
-* Safari 
+* Firefox
+* Safari
 * IE8+
-    
+
 ##Usage
 
 1. Include hvst.toggle.js and hvst.toggle.css in your page:
@@ -29,7 +29,7 @@ jQuery
     ```html
     <html>
         <head>
-            <link rel="stylesheet" src="bower_components/hvst.toggle/dist/hvst.toggle.css" />
+            <link rel="stylesheet" href="bower_components/hvst.toggle/dist/css/hvst.toggle.css" />
         </head>
         <body>
             <!-- page's content -->
@@ -42,7 +42,7 @@ jQuery
     </html>
     ```
 
-2. Initialize hvst.toggle 
+2. Initialize hvst.toggle
 
     ```js
     $('div.tabs').hvstToggle();
@@ -53,7 +53,7 @@ jQuery
 1. `$.hvstToggle('destroy')`
 
     Removes all bindings and generated DOM
-    
+
 2. `$.hvstToggle('refresh')`
 
     Re-run the active item animation
